@@ -1,0 +1,10 @@
+#!/bin/ash
+
+set -e
+
+if [[ "$1" == 'now' ]]; then
+    exec /sync
+else
+    echo "$CRON_SCHEDULE /sync" >> /var/spool/cron/crontabs/root
+    crond -l 2 -f
+fi
