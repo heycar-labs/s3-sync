@@ -1,6 +1,6 @@
 DOCKER_BIN ?= `which docker`
 DOCKER_COMPOSE ?= `which docker-compose`
-TAG ?= "heycar/s3-sync:0.1.1"
+TAG ?= "heycar/s3-sync:0.2.0"
 
 .PHONY: build
 build:

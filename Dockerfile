@@ -14,10 +14,11 @@ RUN  pip install --upgrade \
 
 VOLUME ["/data"]
 
-ENV AWS_S3_BUCKET_URI="s3://foo/bar"
+ENV FROM="s3://foo/bar"
+ENV TO="/data"
 ENV CRON_SCHEDULE="0 1 * * *"
 ENV PARAMS=""
 
 ADD src/ /
 
-CMD ["/start"]
+CMD "/start"
