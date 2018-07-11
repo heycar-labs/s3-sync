@@ -4,6 +4,6 @@ set -e
 
 echo "[s3-sync] $(date) - started"
 
-aws s3 sync $AWS_S3_BUCKET_URI /data $PARAMS
+aws s3 sync $FROM $TO $PARAMS
 
 echo "[s3-sync] $(date) - finished"

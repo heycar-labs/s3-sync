@@ -1,11 +1,10 @@
 version: "3"
 services:
   s3-sync:
-    image: heycar/s3-sync:0.1.1
+    image: heycar/s3-sync:0.2.0
     volumes:
         - ./data:/data
     environment:
       - CRON_SCHEDULE=1/1 * * * *
-      - AWS_ACCESS_KEY_ID=
-      - AWS_SECRET_ACCESS_KEY=
-      - AWS_S3_BUCKET_URI=s3://my-bucket/
+      - FROM=s3://foo/bar
+      - TO=/data
