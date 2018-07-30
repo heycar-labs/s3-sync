@@ -12,13 +12,16 @@ RUN  pip install --upgrade \
       pip \
       awscli
 
+# Mount default volume
 VOLUME ["/data"]
 
+# Set default configs
 ENV FROM="s3://foo/bar"
 ENV TO="/data"
 ENV CRON_SCHEDULE="0 1 * * *"
 ENV PARAMS=""
 
+# Add the scripts
 ADD src/ /
 
 CMD "/start"
