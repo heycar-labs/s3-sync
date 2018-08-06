@@ -1,7 +1,7 @@
 version: "3"
 services:
   s3-sync:
-    image: heycar/s3-sync:0.2.0
+    image: heycar/s3-sync:0.3.0
     volumes:
         - ./data:/data
     environment:
