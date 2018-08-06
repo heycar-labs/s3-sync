@@ -21,6 +21,7 @@ make run
 
 * `FROM` - default `"s3://foo/bar"`
 * `TO` - default `"/data"`
+* `NOW` - boolean default `"false"`
 * `CRON_SCHEDULE` - default `"0 1 * * *"`
 * `PARAMS` - e.g.: `"--size-only"`, default `""`
 

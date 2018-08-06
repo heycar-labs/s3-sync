@@ -2,9 +2,10 @@
 
 set -e
 
-if [[ "$1" == 'now' ]]; then
+if [[ "$NOW" == 'true' ]]; then
+    echo "[s3-sync] $(date) - first time sync"
     exec /sync
-else
-    echo "$CRON_SCHEDULE /sync" >> /var/spool/cron/crontabs/root
-    crond -l 2 -f
 fi
+
+echo "$CRON_SCHEDULE /sync" >> /var/spool/cron/crontabs/root
+crond -l 2 -f

@@ -5,6 +5,7 @@ services:
     volumes:
         - ./data:/data
     environment:
+      - NOW='false'
       - CRON_SCHEDULE=1/1 * * * *
       - FROM=s3://foo/bar
       - TO=/data

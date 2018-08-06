@@ -19,6 +19,7 @@ VOLUME ["/data"]
 ENV FROM="s3://foo/bar"
 ENV TO="/data"
 ENV CRON_SCHEDULE="0 1 * * *"
+ENV NOW="false"
 ENV PARAMS=""
 
 # Add the scripts
