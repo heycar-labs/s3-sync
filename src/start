@@ -4,7 +4,7 @@ set -e
 
 if [[ "$NOW" == 'true' ]]; then
     echo "[s3-sync] $(date) - first time sync"
-    exec /sync
+    /sync
 fi
 
 echo "$CRON_SCHEDULE /sync" >> /var/spool/cron/crontabs/root
